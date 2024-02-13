@@ -1,0 +1,34 @@
+[debug] [2024-02-13T10:55:21.436Z] ----------------------------------------------------------------------
+[debug] [2024-02-13T10:55:21.438Z] Command:       /usr/local/bin/node /Users/zopper/Desktop/reactDev/multiselect/node_modules/.bin/firebase deploy
+[debug] [2024-02-13T10:55:21.438Z] CLI Version:   13.0.3
+[debug] [2024-02-13T10:55:21.438Z] Platform:      darwin
+[debug] [2024-02-13T10:55:21.438Z] Node Version:  v20.10.0
+[debug] [2024-02-13T10:55:21.438Z] Time:          Tue Feb 13 2024 16:25:21 GMT+0530 (India Standard Time)
+[debug] [2024-02-13T10:55:21.438Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-13T10:55:21.440Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-02-13T10:55:21.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-13T10:55:21.503Z] > authorizing via signed-in user (ashiishcumar@gmail.com)
+[debug] [2024-02-13T10:55:21.503Z] [iam] checking project zepto-assignment for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-02-13T10:55:21.503Z] > refreshing access token with scopes: []
+[debug] [2024-02-13T10:55:21.503Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-02-13T10:55:21.503Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-13T10:55:21.774Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-02-13T10:55:21.775Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-13T10:55:21.784Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/zepto-assignment:testIamPermissions [none]
+[debug] [2024-02-13T10:55:21.784Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/zepto-assignment:testIamPermissions x-goog-quota-user=projects/zepto-assignment
+[debug] [2024-02-13T10:55:21.784Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zepto-assignment:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-02-13T10:55:22.165Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-02-13T10:55:22.166Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-02-13T10:55:23.556Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/zepto-assignment:testIamPermissions 200
+[debug] [2024-02-13T10:55:23.556Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/zepto-assignment:testIamPermissions {}
+[debug] [2024-02-13T10:55:23.557Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project zepto-assignment:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-02-13T10:55:23.558Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zepto-assignment [none]
+[debug] [2024-02-13T10:55:24.069Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zepto-assignment 403
+[debug] [2024-02-13T10:55:24.069Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zepto-assignment {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-02-13T10:55:24.070Z] HTTP Error: 403, The caller does not have permission
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
